@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmoru4ft2ox4u"
-path="res://.godot/imported/gnu-120x100 - Edited.png-196b331fd4fe137ea79bf917e0fcc518.ctex"
+uid="uid://bj2xg1ravqpnf"
+path="res://.godot/imported/andr.png-4bf07ef6a230114ddd4b66b345d501a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/gnu-120x100 - Edited.png"
-dest_files=["res://.godot/imported/gnu-120x100 - Edited.png-196b331fd4fe137ea79bf917e0fcc518.ctex"]
+source_file="res://Assets/andr.png"
+dest_files=["res://.godot/imported/andr.png-4bf07ef6a230114ddd4b66b345d501a1.ctex"]
 
 [params]
 

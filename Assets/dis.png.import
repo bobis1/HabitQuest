@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6d0sjgkbqvjv"
-path="res://.godot/imported/disciple-45x51 - Edited.png-2a458a76565809c8520eba0e85aa1c7e.ctex"
+path="res://.godot/imported/dis.png-052a89b87c1d59781136e7996d13ec90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/disciple-45x51 - Edited.png"
-dest_files=["res://.godot/imported/disciple-45x51 - Edited.png-2a458a76565809c8520eba0e85aa1c7e.ctex"]
+source_file="res://Assets/dis.png"
+dest_files=["res://.godot/imported/dis.png-052a89b87c1d59781136e7996d13ec90.ctex"]
 
 [params]
 
