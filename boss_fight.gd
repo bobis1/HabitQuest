@@ -5,8 +5,9 @@ var health: int
 @export var Sprite: Sprite2D
 @export var Texture1: Texture2D
 @export var AttackCounter: Label
-
-
+@export var particleSystem: GPUParticles2D
+@export var ParticleTimer: Timer
+@export var Camera: Camera2D
 func _ready() -> void:
 	health = randi_range(100, 200)
 	if healthLabel:
@@ -19,14 +20,21 @@ func _on_attack_pressed() -> void:
 		health = health - randi_range(Globals.StreakNum, 50)
 		if health <= 0:
 			healthLabel.text = "You win!"
-			
 		else:
 			healthLabel.text = "Health:" + str(health)
 		Globals.AttackCharge = Globals.AttackCharge - 1
+		particleSystem.visible = true
+		ParticleTimer.start()
+		Camera.apply_shake(40)
 		AttackCounter.text = "Attack Counter: " + str(Globals.AttackCharge)
 	pass 
 
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://main.tscn")
+	pass
+
+
+func _on_particle_timer_timeout() -> void:
+	particleSystem.visible = false
 	pass
