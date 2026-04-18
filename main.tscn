@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://dps5888mh4l7u"]
 
 [ext_resource type="Script" uid="uid://5xuyv0xlpqef" path="res://Scripts/habitTracking.gd" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://dbk5x7i11bowe" path="res://plus.png" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://bodtqoyaljai8" path="res://Minecraft.ttf" id="2_272bh"]
 [ext_resource type="Texture2D" uid="uid://berbur2tsi80l" path="res://Tux.png" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bpx8agwm6mxqg" path="res://liwo.png" id="3_5vw27"]
 [ext_resource type="Texture2D" uid="uid://dbobtecd3rtqo" path="res://Speech_balloon.svg.png" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b04lwqaoqvuum" path="res://Assets/Square.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dpmnvj0grew8n" path="res://pixel-art-river-landscape-illustration.jpg" id="7_kek77"]
 
 [node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay", "StreakNaming", "StreakContainer", "AttackCharge")]
 script = ExtResource("1_ig7tw")
@@ -20,16 +22,14 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Background" type="ColorRect" parent="Control" unique_id=1900385695]
-visibility_layer = 2
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1041114074]
 z_index = -1
+z_as_relative = false
 layout_mode = 0
-offset_left = -771.0
-offset_top = -276.0
-offset_right = -3.0
-offset_bottom = 124.0
-scale = Vector2(3.3584642, 3.1381972)
-color = Color(0.85087264, 0.5953814, 0.48914206, 0.9843137)
+offset_right = 7000.0
+offset_bottom = 3923.0
+scale = Vector2(0.16896755, 0.16716218)
+texture = ExtResource("7_kek77")
 
 [node name="Label" type="Label" parent="Control" unique_id=1710800276]
 visible = false
@@ -40,11 +40,19 @@ offset_right = 285.0
 offset_bottom = 114.0
 
 [node name="StreakNaming" type="Control" parent="Control" unique_id=172233871]
+visible = false
 anchors_preset = 0
+<<<<<<< Updated upstream
 offset_left = 770.0
 offset_top = 84.0
 offset_right = 810.0
 offset_bottom = 124.0
+=======
+offset_left = 171.0
+offset_top = 212.0
+offset_right = 211.0
+offset_bottom = 252.0
+>>>>>>> Stashed changes
 
 [node name="LineEdit" type="LineEdit" parent="Control/StreakNaming" unique_id=1237987199]
 layout_mode = 0
@@ -52,8 +60,25 @@ offset_left = -74.0
 offset_top = -1.0
 offset_right = 226.0
 offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.52156866, 0.28235295, 0.050980393, 1)
+theme_override_fonts/font = ExtResource("2_272bh")
+theme_override_font_sizes/font_size = 17
 placeholder_text = "Streak Name"
 
+<<<<<<< Updated upstream
+=======
+[node name="CreateStreak" type="Button" parent="Control" unique_id=62943996]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 523.0
+offset_top = 256.0
+offset_right = 1043.0
+offset_bottom = 776.0
+scale = Vector2(0.25, 0.25)
+icon = ExtResource("3_5vw27")
+flat = true
+
+>>>>>>> Stashed changes
 [node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1029101994]
 layout_mode = 0
 offset_left = 131.0
@@ -62,12 +87,24 @@ offset_right = 171.0
 offset_bottom = 296.0
 theme_override_constants/separation = 35
 
-[node name="Label2" type="Label" parent="Control" unique_id=1332841390]
+[node name="Create Streak Label" type="Label" parent="Control" unique_id=1332841390]
 layout_mode = 0
+<<<<<<< Updated upstream
 offset_left = 549.0
 offset_top = 21.0
 offset_right = 654.0
 offset_bottom = 44.0
+=======
+offset_left = 513.0
+offset_top = 221.99998
+offset_right = 631.0
+offset_bottom = 245.99998
+scale = Vector2(1.6800001, 1.6399988)
+theme_override_colors/font_color = Color(0.5197665, 0.28240633, 0.052693315, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.99607843)
+theme_override_fonts/font = ExtResource("2_272bh")
+theme_override_font_sizes/font_size = 17
+>>>>>>> Stashed changes
 text = "Create Streak"
 
 [node name="CreateStreak" type="Button" parent="Control/Label2" unique_id=62943996]
