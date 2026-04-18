@@ -9,7 +9,7 @@ Most habit trackers are bad at motivating users, often letting them let go of th
 We decided to add a twist to our habit tracker. In addition with our modern tracking system, we have a special boss fight that you can fight with your good habits and broken bad habits.
 
 ## tech stack
-Frontend: https://bobis1.github.io/hshacks/
+Frontend: https://bobis1.github.io/HabitQuest/
   it uses Html, JS, and CSS
 We used Godot for the main product
   GDScript
