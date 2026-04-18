@@ -9,7 +9,6 @@ var health: int
 
 func _ready() -> void:
 	health = randi_range(100, 200)
-	
 	if healthLabel:
 		healthLabel.text = "Health:" + str(health)
 	AttackCounter.text = "Attack Counter: " + str(Globals.AttackCharge)
