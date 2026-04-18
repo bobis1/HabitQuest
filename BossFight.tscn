@@ -29,7 +29,7 @@ scale_min = 0.25
 scale_max = 0.5
 scale_curve = SubResource("CurveTexture_di0ir")
 
-[node name="BossFight" type="Node2D" unique_id=942925526 node_paths=PackedStringArray("healthLabel", "Sprite", "AttackCounter", "particleSystem", "ParticleTimer", "Camera")]
+[node name="BossFight" type="Node2D" unique_id=942925526 node_paths=PackedStringArray("healthLabel", "Sprite", "AttackCounter", "particleSystem", "ParticleTimer", "Camera", "defeatParticles")]
 script = ExtResource("1_fxjcl")
 healthLabel = NodePath("Control/Label")
 BossSprite = Array[Texture2D]([ExtResource("2_vhg21"), ExtResource("3_di0ir"), ExtResource("4_l4w7m")])
@@ -39,6 +39,7 @@ AttackCounter = NodePath("Control/AttackCounter")
 particleSystem = NodePath("Control/Sprite2D/GPUParticles2D")
 ParticleTimer = NodePath("ParticleTimer")
 Camera = NodePath("Camera2D")
+defeatParticles = NodePath("Control/Sprite2D/GPUParticles2D2")
 
 [node name="Control" type="Control" parent="." unique_id=313151410]
 layout_mode = 3
@@ -58,10 +59,10 @@ texture = ExtResource("5_xtu02")
 
 [node name="Label" type="Label" parent="Control" unique_id=156313855]
 layout_mode = 0
-offset_left = 402.0
-offset_top = 97.0
-offset_right = 472.0
-offset_bottom = 120.0
+offset_left = 89.0
+offset_top = 173.0
+offset_right = 159.0
+offset_bottom = 196.0
 scale = Vector2(2, 2)
 theme_override_colors/font_color = Color(1, 0.050980393, 0.08235294, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -97,6 +98,17 @@ visible = false
 self_modulate = Color(0.9269141, 0.24252346, 0.29544622, 1)
 position = Vector2(-1.6000001, -1.2)
 texture = ExtResource("5_vhg21")
+speed_scale = 2.0
+randomness = 1.0
+draw_order = 0
+process_material = SubResource("ParticleProcessMaterial_0yil2")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="Control/Sprite2D" unique_id=1472636688]
+visible = false
+self_modulate = Color(0.9269141, 0.24252346, 0.29544622, 1)
+position = Vector2(-1.6000001, -1.2)
+texture = ExtResource("5_vhg21")
+lifetime = 4.0
 speed_scale = 2.0
 randomness = 1.0
 draw_order = 0

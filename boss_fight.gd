@@ -8,6 +8,7 @@ var health: int
 @export var particleSystem: GPUParticles2D
 @export var ParticleTimer: Timer
 @export var Camera: Camera2D
+@export var defeatParticles: GPUParticles2D
 func _ready() -> void:
 	health = randi_range(100, 200)
 	if healthLabel:
@@ -17,9 +18,11 @@ func _ready() -> void:
 
 func _on_attack_pressed() -> void:
 	if  Globals.AttackCharge > 0:
-		health = health - randi_range(Globals.StreakNum, 50)
+		health = health - Globals.StreakNum
 		if health <= 0:
 			healthLabel.text = "You win!"
+			defeatParticles.visible = true
+			Sprite.visible = false
 		else:
 			healthLabel.text = "Health:" + str(health)
 		Globals.AttackCharge = Globals.AttackCharge - 1
