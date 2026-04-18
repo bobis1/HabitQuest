@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="HabitTracker"
+run/main_scene="uid://dps5888mh4l7u"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*uid://bqayd5qujfh8n"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [physics]
 
