@@ -42,7 +42,7 @@ offset_bottom = 147.0
 text = "Back"
 
 [node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=304285163]
-position = Vector2(476.99997, 252.99998)
+position = Vector2(484, 314)
 scale = Vector2(10, 10)
 texture = ExtResource("3_di0ir")
 

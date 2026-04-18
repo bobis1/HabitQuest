@@ -20,6 +20,7 @@ func _on_attack_pressed() -> void:
 		health = health - randi_range(Globals.StreakNum, 50)
 		if health <= 0:
 			healthLabel.text = "You win!"
+			
 		else:
 			healthLabel.text = "Health:" + str(health)
 		Globals.AttackCharge = Globals.AttackCharge - 1
