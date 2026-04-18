@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://5xuyv0xlpqef" path="res://Scripts/habitTracking.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dbk5x7i11bowe" path="res://plus.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://berbur2tsi80l" path="res://Tux.png" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://dbobtecd3rtqo" path="res://Speech_balloon.svg.png" id="4_lquwl"]
 
 [node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay", "StreakNaming", "StreakContainer")]
 script = ExtResource("1_ig7tw")
@@ -41,28 +43,70 @@ offset_bottom = 30.0
 placeholder_text = "Streak Name"
 
 [node name="CreateStreak" type="Button" parent="Control" unique_id=62943996]
-layout_mode = 0
-offset_top = 39.0
-offset_right = 520.0
-offset_bottom = 559.0
+layout_mode = 1
+anchors_preset = -1
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 456.0
+offset_bottom = 456.0
 scale = Vector2(0.25, 0.25)
 icon = ExtResource("2_0xm2m")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1029101994]
 layout_mode = 0
-offset_left = 270.0
-offset_top = 138.0
-offset_right = 310.0
-offset_bottom = 178.0
+offset_left = 80.0
+offset_top = -56.0
+offset_right = 120.0
+offset_bottom = -16.0
 theme_override_constants/separation = 35
 
 [node name="Label2" type="Label" parent="Control" unique_id=1332841390]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 9.0
-offset_right = 117.0
-offset_bottom = 32.0
+offset_left = -56.0
+offset_top = -104.0
+offset_right = 49.0
+offset_bottom = -81.0
 text = "Create Streak"
+
+[node name="Background" type="ColorRect" parent="Control" unique_id=1900385695]
+z_index = -1
+layout_mode = 0
+offset_left = -424.00003
+offset_top = -288.0
+offset_right = 343.99997
+offset_bottom = 112.0
+scale = Vector2(1.1364785, 1.5691403)
+color = Color(0.85087264, 0.5953814, 0.48914206, 0.9843137)
+
+[node name="Tux" type="TextureRect" parent="Control" unique_id=144889326]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 128.0
+offset_right = 521.0
+offset_bottom = 442.0
+scale = Vector2(0.6345681, 0.6081809)
+texture = ExtResource("3_1bvp3")
+
+[node name="SpeechBubble" type="TextureRect" parent="Control" unique_id=1603101699]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 32.0
+offset_right = 2232.0
+offset_bottom = 1587.0
+scale = Vector2(-0.09095293, 0.097323775)
+texture = ExtResource("4_lquwl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/SpeechBubble" unique_id=1554546880]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 1671.1938
+offset_top = 349.34937
+offset_right = 1871.1938
+offset_bottom = 449.34937
+scale = Vector2(-7.349453, 7.057142)
+text = "Hello. My name is Tux, and I will help you maintain good habits."
+fit_content = true
+scroll_active = false
 
 [connection signal="text_submitted" from="Control/StreakNaming/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Control/CreateStreak" to="." method="_on_create_streak_pressed"]
