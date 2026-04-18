@@ -29,6 +29,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	streakDisplay.text = str(Globals.StreakNum)
+	
 
 
 func _on_create_streak_pressed() -> void:
@@ -56,7 +57,7 @@ func create_instance(add):
 
 
 func _on_boss_fight_pressed() -> void:
-	get_tree().change_scene_to_file("res://BossFight.tscn")
+	get_tree().change_scene_to_file("res://BossFight1.tscn")
 	pass # Replace with function body.
 
 
