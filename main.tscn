@@ -4,19 +4,32 @@
 [ext_resource type="Texture2D" uid="uid://dbk5x7i11bowe" path="res://plus.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://berbur2tsi80l" path="res://Tux.png" id="3_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dbobtecd3rtqo" path="res://Speech_balloon.svg.png" id="4_lquwl"]
+[ext_resource type="Texture2D" uid="uid://b04lwqaoqvuum" path="res://Assets/Square.png" id="5_lquwl"]
 
-[node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay", "StreakNaming", "StreakContainer")]
+[node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay", "StreakNaming", "StreakContainer", "AttackCharge")]
 script = ExtResource("1_ig7tw")
 streakButton = NodePath("Control/CreateStreak")
 streakDisplay = NodePath("Control/Label")
 StreakNaming = NodePath("Control/StreakNaming")
 StreakContainer = NodePath("Control/VBoxContainer")
+AttackCharge = NodePath("Control/Attack Charges")
 
 [node name="Control" type="Control" parent="." unique_id=2045931258]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="Control" unique_id=1900385695]
+visibility_layer = 2
+z_index = -1
+layout_mode = 0
+offset_left = -771.0
+offset_top = -276.0
+offset_right = -3.0
+offset_bottom = 124.0
+scale = Vector2(3.3584642, 3.1381972)
+color = Color(0.85087264, 0.5953814, 0.48914206, 0.9843137)
 
 [node name="Label" type="Label" parent="Control" unique_id=1710800276]
 visible = false
@@ -27,12 +40,11 @@ offset_right = 285.0
 offset_bottom = 114.0
 
 [node name="StreakNaming" type="Control" parent="Control" unique_id=172233871]
-visible = false
 anchors_preset = 0
-offset_left = 225.0
-offset_top = 10.0
-offset_right = 265.0
-offset_bottom = 50.0
+offset_left = 172.0
+offset_top = 204.0
+offset_right = 212.0
+offset_bottom = 244.0
 
 [node name="LineEdit" type="LineEdit" parent="Control/StreakNaming" unique_id=1237987199]
 layout_mode = 0
@@ -68,17 +80,8 @@ offset_right = 633.0
 offset_bottom = 243.0
 text = "Create Streak"
 
-[node name="Background" type="ColorRect" parent="Control" unique_id=1900385695]
-z_index = -1
-layout_mode = 0
-offset_left = -771.0
-offset_top = -276.0
-offset_right = -3.0
-offset_bottom = 124.0
-scale = Vector2(3.3584642, 3.1381972)
-color = Color(0.85087264, 0.5953814, 0.48914206, 0.9843137)
-
 [node name="Tux" type="TextureRect" parent="Control" unique_id=144889326]
+visible = false
 layout_mode = 0
 offset_left = 993.00006
 offset_top = 460.0
@@ -88,6 +91,7 @@ scale = Vector2(0.6345681, 0.6081809)
 texture = ExtResource("3_1bvp3")
 
 [node name="SpeechBubble" type="TextureRect" parent="Control" unique_id=1603101699]
+visible = false
 layout_mode = 0
 offset_left = 1023.0
 offset_top = 336.0
@@ -108,5 +112,37 @@ text = "Hello. My name is Tux, and I will help you maintain good habits."
 fit_content = true
 scroll_active = false
 
+[node name="Boss Fight" type="Button" parent="Control" unique_id=1419027088]
+layout_mode = 0
+offset_left = 1026.0
+offset_top = 27.0
+offset_right = 1113.0
+offset_bottom = 58.0
+text = "Boss Fight"
+
+[node name="Square" type="Sprite2D" parent="Control" unique_id=23728717]
+position = Vector2(813, 37.999996)
+scale = Vector2(1.9600098, -0.26199818)
+texture = ExtResource("5_lquwl")
+
+[node name="Attack Charges" type="Label" parent="Control" unique_id=874328643]
+layout_mode = 0
+offset_left = 701.0
+offset_top = 26.0
+offset_right = 822.0
+offset_bottom = 49.0
+text = "Attack Charges:"
+
+[node name="TextureRect" type="TextureRect" parent="Control/Attack Charges" unique_id=899975545]
+layout_mode = 0
+offset_top = -15.0
+offset_right = 40.0
+offset_bottom = 25.0
+
+[node name="Timer" type="Timer" parent="." unique_id=2017707756]
+autostart = true
+
 [connection signal="text_submitted" from="Control/StreakNaming/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Control/CreateStreak" to="." method="_on_create_streak_pressed"]
+[connection signal="pressed" from="Control/Boss Fight" to="." method="_on_boss_fight_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

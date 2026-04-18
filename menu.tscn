@@ -48,9 +48,9 @@ text = "Add Streak"
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=1456933118]
 layout_mode = 0
-offset_left = 336.0
+offset_left = 51.00006
 offset_top = 240.00002
-offset_right = 601.0
+offset_right = 316.00006
 offset_bottom = 554.0
 scale = Vector2(0.27798805, 0.27599847)
 texture = ExtResource("2_4hy44")

@@ -5,13 +5,14 @@ var health: int
 @export var Sprite: Sprite2D
 
 func _ready() -> void:
-#	BossSprite.resize(3)
 	health = randi_range(100, 200)
-	healthLabel.text = "Health:" + str(health)
-	Sprite.texture = BossSprite[randi_range(0, BossSprite.size()-1)]
-	print("Boss Sprite ", str(BossSprite.size()))
-	pass
-
+	
+	if healthLabel:
+		healthLabel.text = "Health:" + str(health)
+	
+	if BossSprite.size() > 0:
+		var largestIndex = BossSprite.size() - 1
+		Sprite.texture = BossSprite[randi_range(0, largestIndex)]
 
 
 func _on_attack_pressed() -> void:
@@ -21,6 +22,7 @@ func _on_attack_pressed() -> void:
 			healthLabel.text = "You win!"
 		else:
 			healthLabel.text = "Health:" + str(health)
+		Globals.AttackCharge = Globals.AttackCharge - 1
 	pass 
 
 

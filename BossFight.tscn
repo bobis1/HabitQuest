@@ -8,7 +8,7 @@
 [node name="BossFight" type="Node2D" unique_id=942925526 node_paths=PackedStringArray("healthLabel", "Sprite")]
 script = ExtResource("1_fxjcl")
 healthLabel = NodePath("Control/Label")
-BossSprite = [ExtResource("2_vhg21"), ExtResource("3_di0ir"), ExtResource("4_l4w7m")]
+BossSprite = Array[Texture2D]([ExtResource("2_vhg21"), ExtResource("3_di0ir"), ExtResource("4_l4w7m")])
 Sprite = NodePath("Control/Sprite2D")
 
 [node name="Control" type="Control" parent="." unique_id=313151410]
@@ -40,7 +40,7 @@ offset_bottom = 297.0
 text = "Back"
 
 [node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=304285163]
-position = Vector2(75, 84)
+position = Vector2(244, 103)
 
 [connection signal="pressed" from="Control/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]

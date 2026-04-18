@@ -4,7 +4,7 @@ extends Node
 @export var streakDisplay: Label
 @export var StreakNaming: Control
 @export var StreakContainer: VBoxContainer
-@export var AttackCharge: Button
+@export var AttackCharge: Label
 var SceneTemplate: PackedScene = preload("res://StreakTemplate.tscn")
 var currentHabitName: String
 var isNameSubmitted: bool
@@ -61,7 +61,9 @@ func _on_boss_fight_pressed() -> void:
 	pass # Replace with function body.
 
 
-func _on_attack_charge_timeout() -> void:
+
+
+func _on_timer_timeout() -> void:
 	Globals.AttackCharge += 1
 	AttackCharge.text = "Attack Charges:" + str(Globals.AttackCharge)
-	pass
+	pass # Replace with function body.
