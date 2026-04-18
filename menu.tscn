@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://bso7hj8ah2dd0"]
+[gd_scene format=3 uid="uid://cmh8bgllqd36l"]
 
 [ext_resource type="Texture2D" uid="uid://dbk5x7i11bowe" path="res://plus.png" id="1_mae5d"]
 [ext_resource type="Texture2D" uid="uid://berbur2tsi80l" path="res://Tux.png" id="2_4hy44"]
 [ext_resource type="Texture2D" uid="uid://dbobtecd3rtqo" path="res://Speech_balloon.svg.png" id="3_ytr4m"]
 
-[node name="Node2D" type="Node2D" unique_id=459433353]
+[node name="Node2D2" type="Node2D" unique_id=459433353]
 
 [node name="Control" type="Control" parent="." unique_id=1668240370]
 layout_mode = 3
