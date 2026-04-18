@@ -4,11 +4,13 @@ extends Node
 @export var streakDisplay: Label
 @export var StreakNaming: Control
 @export var StreakContainer: VBoxContainer
+@export var AttackCharge: Button
 var SceneTemplate: PackedScene = preload("res://StreakTemplate.tscn")
 var currentHabitName: String
 var isNameSubmitted: bool
 var isNameStarted: bool
 const SAVE_PATH = "user://STREAKSAVE.txt"
+var time
 
 
 
@@ -27,6 +29,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	streakDisplay.text = str(Globals.StreakNum)
+
 
 func _on_create_streak_pressed() -> void:
 	StreakNaming.visible = true
@@ -50,3 +53,14 @@ func create_instance(add):
 	StreakContainer.add_child(scene_instance)
 	scene_instance.setup_streak(currentHabitName)
 	return scene_instance
+
+
+func _on_boss_fight_pressed() -> void:
+	get_tree().change_scene_to_file("res://BossFight.tscn")
+	pass # Replace with function body.
+
+
+func _on_attack_charge_timeout() -> void:
+	Globals.AttackCharge += 1
+	AttackCharge.text = "Attack Charges:" + str(Globals.AttackCharge)
+	pass

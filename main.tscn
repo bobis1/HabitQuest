@@ -5,12 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://berbur2tsi80l" path="res://Tux.png" id="3_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dbobtecd3rtqo" path="res://Speech_balloon.svg.png" id="4_lquwl"]
 
-[node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay", "StreakNaming", "StreakContainer")]
+[node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay", "StreakNaming", "StreakContainer", "AttackCharge")]
 script = ExtResource("1_ig7tw")
 streakButton = NodePath("Control/CreateStreak")
 streakDisplay = NodePath("Control/Label")
 StreakNaming = NodePath("Control/StreakNaming")
 StreakContainer = NodePath("Control/VBoxContainer")
+AttackCharge = NodePath("Control/Attack Charge")
 
 [node name="Control" type="Control" parent="." unique_id=2045931258]
 layout_mode = 3
@@ -67,6 +68,7 @@ offset_right = 49.0
 offset_bottom = -81.0
 text = "Create Streak"
 
+<<<<<<< Updated upstream
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=1036776855]
 layout_mode = 0
 offset_left = 184.0
@@ -115,6 +117,28 @@ offset_right = -256.0
 offset_bottom = -176.0
 scale = Vector2(15.760635, 10.09447)
 color = Color(0, 0, 0, 1)
+=======
+[node name="Boss Fight" type="Button" parent="Control" unique_id=2063731868]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 16.0
+offset_right = 231.0
+offset_bottom = 47.0
+text = "Boss Fight"
+
+[node name="Attack Charge" type="Button" parent="Control" unique_id=129378872]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 18.0
+offset_right = 370.0
+offset_bottom = 49.0
+text = "Attack Charges: "
+
+[node name="AttackCharge" type="Timer" parent="." unique_id=588350399]
+autostart = true
+>>>>>>> Stashed changes
 
 [connection signal="text_submitted" from="Control/StreakNaming/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Control/CreateStreak" to="." method="_on_create_streak_pressed"]
+[connection signal="pressed" from="Control/Boss Fight" to="." method="_on_boss_fight_pressed"]
+[connection signal="timeout" from="AttackCharge" to="." method="_on_attack_charge_timeout"]

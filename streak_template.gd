@@ -19,6 +19,7 @@ func setup_streak(new_habit_name: String) -> void:
 
 func _on_streak_button_pressed() -> void:
 	local_streak += 1
+	Globals.StreakNum += 1
 	var save_path = "user://Streaks/" + habit_name + ".txt"
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_string(str(local_streak))
