@@ -45,53 +45,54 @@ placeholder_text = "Streak Name"
 [node name="CreateStreak" type="Button" parent="Control" unique_id=62943996]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 368.0
-offset_top = 232.0
-offset_right = 888.0
-offset_bottom = 752.0
+offset_left = 523.0
+offset_top = 256.0
+offset_right = 1043.0
+offset_bottom = 776.0
 scale = Vector2(0.25, 0.25)
 icon = ExtResource("2_0xm2m")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1029101994]
 layout_mode = 0
-offset_left = 528.0
+offset_left = 131.0
 offset_top = 256.0
-offset_right = 568.0
+offset_right = 171.0
 offset_bottom = 296.0
 theme_override_constants/separation = 35
 
 [node name="Label2" type="Label" parent="Control" unique_id=1332841390]
 layout_mode = 0
-offset_left = 384.0
-offset_top = 200.0
-offset_right = 489.0
-offset_bottom = 223.0
+offset_left = 528.0
+offset_top = 220.0
+offset_right = 633.0
+offset_bottom = 243.0
 text = "Create Streak"
 
 [node name="Background" type="ColorRect" parent="Control" unique_id=1900385695]
 z_index = -1
 layout_mode = 0
-offset_left = -8.0
-offset_right = 760.0
-offset_bottom = 400.0
-scale = Vector2(1.1364785, 1.5691403)
+offset_left = -771.0
+offset_top = -276.0
+offset_right = -3.0
+offset_bottom = 124.0
+scale = Vector2(3.3584642, 3.1381972)
 color = Color(0.85087264, 0.5953814, 0.48914206, 0.9843137)
 
 [node name="Tux" type="TextureRect" parent="Control" unique_id=144889326]
 layout_mode = 0
-offset_left = 696.0
-offset_top = 440.0
-offset_right = 961.0
-offset_bottom = 754.0
+offset_left = 993.00006
+offset_top = 460.0
+offset_right = 1258.0
+offset_bottom = 774.0
 scale = Vector2(0.6345681, 0.6081809)
 texture = ExtResource("3_1bvp3")
 
 [node name="SpeechBubble" type="TextureRect" parent="Control" unique_id=1603101699]
 layout_mode = 0
-offset_left = 752.0
-offset_top = 328.0
-offset_right = 2672.0
-offset_bottom = 1883.0
+offset_left = 1023.0
+offset_top = 336.0
+offset_right = 2943.0
+offset_bottom = 1891.0
 scale = Vector2(-0.09095293, 0.097323775)
 texture = ExtResource("4_lquwl")
 
