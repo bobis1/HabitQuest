@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://5xuyv0xlpqef" path="res://Scripts/habitTracking.gd" id="1_ig7tw"]
 
-[node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay")]
+[node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay", "StreakNaming", "StreakContainer")]
 script = ExtResource("1_ig7tw")
-streakButton = NodePath("Control/StreakAdd")
+streakButton = NodePath("Control/CreateStreak")
 streakDisplay = NodePath("Control/Label")
+StreakNaming = NodePath("Control/StreakNaming")
+StreakContainer = NodePath("Control/VBoxContainer")
 
 [node name="Control" type="Control" parent="." unique_id=2045931258]
 layout_mode = 3
@@ -13,21 +15,43 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="StreakAdd" type="Button" parent="Control" unique_id=1343283887]
-layout_mode = 0
-offset_left = 216.0
-offset_top = 153.0
-offset_right = 328.0
-offset_bottom = 184.0
-text = "Add to streak
-"
-metadata/Streakname = "TEST"
-
 [node name="Label" type="Label" parent="Control" unique_id=1710800276]
+visible = false
 layout_mode = 0
 offset_left = 245.0
 offset_top = 91.0
 offset_right = 285.0
 offset_bottom = 114.0
 
-[connection signal="pressed" from="Control/StreakAdd" to="." method="_on_button_pressed"]
+[node name="StreakNaming" type="Control" parent="Control" unique_id=172233871]
+anchors_preset = 0
+offset_left = 183.0
+offset_top = 8.0
+offset_right = 223.0
+offset_bottom = 48.0
+
+[node name="LineEdit" type="LineEdit" parent="Control/StreakNaming" unique_id=1237987199]
+layout_mode = 0
+offset_left = -63.0
+offset_top = -10.0
+offset_right = 237.0
+offset_bottom = 21.0
+placeholder_text = "Streak Name"
+
+[node name="CreateStreak" type="Button" parent="Control" unique_id=62943996]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 113.0
+offset_bottom = 30.0
+text = "Create Streak"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1029101994]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 138.0
+offset_right = 310.0
+offset_bottom = 178.0
+theme_override_constants/separation = 35
+
+[connection signal="text_submitted" from="Control/StreakNaming/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="Control/CreateStreak" to="." method="_on_create_streak_pressed"]
