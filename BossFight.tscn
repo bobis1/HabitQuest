@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c758m0rmoamcp"]
+
+[node name="BossFight" type="Node2D" unique_id=942925526]
+
+[node name="Control" type="Control" parent="." unique_id=313151410]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

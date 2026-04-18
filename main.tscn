@@ -25,6 +25,7 @@ offset_right = 285.0
 offset_bottom = 114.0
 
 [node name="StreakNaming" type="Control" parent="Control" unique_id=172233871]
+visible = false
 anchors_preset = 0
 offset_left = 225.0
 offset_top = 10.0
@@ -33,10 +34,10 @@ offset_bottom = 50.0
 
 [node name="LineEdit" type="LineEdit" parent="Control/StreakNaming" unique_id=1237987199]
 layout_mode = 0
-offset_left = -63.0
-offset_top = -10.0
-offset_right = 237.0
-offset_bottom = 21.0
+offset_left = -74.0
+offset_top = -1.0
+offset_right = 226.0
+offset_bottom = 30.0
 placeholder_text = "Streak Name"
 
 [node name="CreateStreak" type="Button" parent="Control" unique_id=62943996]
