@@ -1,3 +1,77 @@
 [gd_scene format=3 uid="uid://bso7hj8ah2dd0"]
 
+[ext_resource type="Texture2D" uid="uid://dbk5x7i11bowe" path="res://plus.png" id="1_mae5d"]
+[ext_resource type="Texture2D" uid="uid://berbur2tsi80l" path="res://Tux.png" id="2_4hy44"]
+[ext_resource type="Texture2D" uid="uid://dbobtecd3rtqo" path="res://Speech_balloon.svg.png" id="3_ytr4m"]
+
 [node name="Node2D" type="Node2D" unique_id=459433353]
+
+[node name="Control" type="Control" parent="." unique_id=1668240370]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=394884085]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(10.223368, 8.160001)
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Control" unique_id=788726565]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 48.000004
+offset_right = 172.0
+offset_bottom = 71.0
+scale = Vector2(2.7925856, 2.8496337)
+text = "Tux Streak"
+
+[node name="Button" type="Button" parent="Control" unique_id=1115195295]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 152.0
+offset_right = 672.0
+offset_bottom = 672.0
+scale = Vector2(0.15781146, 0.15025747)
+icon = ExtResource("1_mae5d")
+
+[node name="Label" type="Label" parent="Control/Button" unique_id=197379706]
+layout_mode = 0
+offset_left = 50.6934
+offset_top = -159.72586
+offset_right = 135.6934
+offset_bottom = -136.72586
+scale = Vector2(5.055472, 4.993146)
+text = "Add Streak"
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1456933118]
+layout_mode = 0
+offset_left = 336.00003
+offset_top = 240.00002
+offset_right = 601.0
+offset_bottom = 554.0
+scale = Vector2(0.27798805, 0.27599847)
+texture = ExtResource("2_4hy44")
+
+[node name="TextureRect" type="TextureRect" parent="Control/TextureRect" unique_id=1303664270]
+layout_mode = 0
+offset_left = 115.112755
+offset_top = -260.87106
+offset_right = 2035.1128
+offset_bottom = 1294.1289
+scale = Vector2(-0.2027542, 0.21732906)
+texture = ExtResource("3_ytr4m")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/TextureRect/TextureRect" unique_id=891351506]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 1561.3013
+offset_top = 400.11682
+offset_right = 1761.3013
+offset_bottom = 500.11682
+scale = Vector2(-7.349453, 7.057142)
+text = "Hello. My name is Tux, and I will help you maintain good habits."
+fit_content = true
+scroll_active = false
