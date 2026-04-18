@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://yjgn5qgnx41n"]
+
+[ext_resource type="Script" uid="uid://cme76nu8p76s2" path="res://boss_fight.gd" id="1_amtqa"]
+
+[node name="BossFight" type="Node2D" unique_id=942925526 node_paths=PackedStringArray("healthLabel")]
+script = ExtResource("1_amtqa")
+healthLabel = NodePath("Control/Label")
+
+[node name="Control" type="Control" parent="." unique_id=313151410]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=156313855]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Health: 0"
+
+[node name="Attack" type="Button" parent="Control" unique_id=2054247799]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 54.0
+offset_right = 168.0
+offset_bottom = 85.0
+text = "Attack"
+
+[node name="Back" type="Button" parent="Control" unique_id=2136704563]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 93.0
+offset_right = 169.0
+offset_bottom = 124.0
+text = "Back"
+
+[connection signal="pressed" from="Control/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
