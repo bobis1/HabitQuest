@@ -2,26 +2,51 @@ extends Node
 
 @export var streakButton: Button
 @export var streakDisplay: Label
+@export var StreakNaming: Control
+@export var StreakContainer: VBoxContainer
+var SceneTemplate: PackedScene = preload("res://StreakTemplate.tscn")
+var currentHabitName: String
+var isNameSubmitted: bool
+var isNameStarted: bool
+const SAVE_PATH = "user://STREAKSAVE.txt"
 
-const SAVE_PATH = "user://PLACEHOLDER.txt"
+
 
 func _ready() -> void:
-	if FileAccess.file_exists(SAVE_PATH):
-		var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
-		Globals.StreakNum = file.get_as_text().to_int()
-	else:
-		print("Streak Save file not found. Starting from 0.")
-		Globals.StreakNum = 0
+	var StreakVar = DirAccess.open("user://Streaks")
+	if StreakVar:
+		var StreakFiles = StreakVar.get_files()
+		for file_name in StreakFiles:
+			if file_name.ends_with(".txt"):
+					var habit_name = file_name.trim_suffix(".txt")
+					print("Found saved habit: ", habit_name)
+					currentHabitName = habit_name
+					create_instance(SceneTemplate)
+	pass
 
 
 func _process(delta: float) -> void:
 	streakDisplay.text = str(Globals.StreakNum)
 
+func _on_create_streak_pressed() -> void:
+	StreakNaming.visible = true
 
-func _on_button_pressed() -> void:
-	Globals.StreakNum += 1
-	
 
-	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+
+
+func _on_line_edit_text_submitted(new_text: String) -> void:
+	if new_text.strip_edges() == "":
+		return 
+		
+	currentHabitName = new_text
+	StreakNaming.visible = false
 	
-	file.store_string(str(Globals.StreakNum))
+	create_instance(SceneTemplate)
+
+
+
+func create_instance(add):
+	var scene_instance = add.instantiate()
+	StreakContainer.add_child(scene_instance)
+	scene_instance.setup_streak(currentHabitName)
+	return scene_instance

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bswgyvsgf63id"]
+
+[ext_resource type="Script" uid="uid://birq6kvuv5oog" path="res://streak_template.gd" id="1_dr64m"]
+
+[node name="StreakTemplate" type="Control" unique_id=2012262603]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dr64m")
+
+[node name="StreakButton" type="Button" parent="." unique_id=479000262]
+layout_mode = 0
+offset_left = -31.0
+offset_top = 51.0
+offset_right = 36.0
+offset_bottom = 82.0
+text = "Streak0"
+
+[connection signal="pressed" from="StreakButton" to="." method="_on_streak_button_pressed"]
