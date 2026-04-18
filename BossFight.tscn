@@ -21,8 +21,10 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="Control" unique_id=156313855]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 431.0
+offset_top = 128.0
+offset_right = 501.0
+offset_bottom = 151.0
 text = "Health: 0"
 
 [node name="Attack" type="Button" parent="Control" unique_id=2054247799]
@@ -42,16 +44,16 @@ offset_bottom = 147.0
 text = "Back"
 
 [node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=304285163]
-position = Vector2(484, 314)
+position = Vector2(483, 407)
 scale = Vector2(10, 10)
 texture = ExtResource("3_di0ir")
 
 [node name="AttackCounter" type="Label" parent="Control" unique_id=863173154]
 layout_mode = 0
-offset_left = 98.0
-offset_top = 4.0
-offset_right = 219.0
-offset_bottom = 27.0
+offset_left = 93.0
+offset_top = 83.0
+offset_right = 214.0
+offset_bottom = 106.0
 text = "Attack Counter:"
 
 [connection signal="pressed" from="Control/Attack" to="." method="_on_attack_pressed"]
