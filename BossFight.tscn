@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://c758m0rmoamcp"]
 
 [ext_resource type="Script" uid="uid://cme76nu8p76s2" path="res://boss_fight.gd" id="1_fxjcl"]
-[ext_resource type="Texture2D" uid="uid://bj2xg1ravqpnf" path="res://Assets/andromalius-57x88 - Edited.png" id="2_vhg21"]
-[ext_resource type="Texture2D" uid="uid://6d0sjgkbqvjv" path="res://Assets/disciple-45x51 - Edited.png" id="3_di0ir"]
-[ext_resource type="Texture2D" uid="uid://dmoru4ft2ox4u" path="res://Assets/gnu-120x100 - Edited.png" id="4_l4w7m"]
+[ext_resource type="Texture2D" uid="uid://bj2xg1ravqpnf" path="res://Assets/andr.png" id="2_vhg21"]
+[ext_resource type="Texture2D" uid="uid://6d0sjgkbqvjv" path="res://Assets/dis.png" id="3_di0ir"]
+[ext_resource type="Texture2D" uid="uid://dmoru4ft2ox4u" path="res://Assets/gnu.png" id="4_l4w7m"]
 
-[node name="BossFight" type="Node2D" unique_id=942925526 node_paths=PackedStringArray("healthLabel", "Sprite")]
+[node name="BossFight" type="Node2D" unique_id=942925526 node_paths=PackedStringArray("healthLabel", "Sprite", "AttackCounter")]
 script = ExtResource("1_fxjcl")
 healthLabel = NodePath("Control/Label")
 BossSprite = Array[Texture2D]([ExtResource("2_vhg21"), ExtResource("3_di0ir"), ExtResource("4_l4w7m")])
 Sprite = NodePath("Control/Sprite2D")
+Texture1 = ExtResource("3_di0ir")
+AttackCounter = NodePath("Control/AttackCounter")
 
 [node name="Control" type="Control" parent="." unique_id=313151410]
 layout_mode = 3
@@ -25,22 +27,32 @@ text = "Health: 0"
 
 [node name="Attack" type="Button" parent="Control" unique_id=2054247799]
 layout_mode = 0
-offset_left = 113.0
-offset_top = 227.0
-offset_right = 171.0
-offset_bottom = 258.0
+offset_left = 95.0
+offset_top = 116.0
+offset_right = 153.0
+offset_bottom = 147.0
 text = "Attack"
 
 [node name="Back" type="Button" parent="Control" unique_id=2136704563]
 layout_mode = 0
-offset_left = 114.0
-offset_top = 266.0
-offset_right = 172.0
-offset_bottom = 297.0
+offset_left = 157.0
+offset_top = 116.0
+offset_right = 215.0
+offset_bottom = 147.0
 text = "Back"
 
 [node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=304285163]
-position = Vector2(244, 103)
+position = Vector2(484, 314)
+scale = Vector2(10, 10)
+texture = ExtResource("3_di0ir")
+
+[node name="AttackCounter" type="Label" parent="Control" unique_id=863173154]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 4.0
+offset_right = 219.0
+offset_bottom = 27.0
+text = "Attack Counter:"
 
 [connection signal="pressed" from="Control/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]

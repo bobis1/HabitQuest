@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj2xg1ravqpnf"
-path="res://.godot/imported/andromalius-57x88 - Edited.png-fbf4a64e4bf7ed3131d6d5f5c30f9bac.ctex"
+uid="uid://dmoru4ft2ox4u"
+path="res://.godot/imported/gnu.png-fabbb45830c0f25643ccdc5b2deabe6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/andromalius-57x88 - Edited.png"
-dest_files=["res://.godot/imported/andromalius-57x88 - Edited.png-fbf4a64e4bf7ed3131d6d5f5c30f9bac.ctex"]
+source_file="res://Assets/gnu.png"
+dest_files=["res://.godot/imported/gnu.png-fabbb45830c0f25643ccdc5b2deabe6c.ctex"]
 
 [params]
 

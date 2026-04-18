@@ -57,7 +57,7 @@ func create_instance(add):
 
 
 func _on_boss_fight_pressed() -> void:
-	get_tree().change_scene_to_file("res://BossFight1.tscn")
+	get_tree().change_scene_to_file("res://BossFight.tscn")
 	pass # Replace with function body.
 
 
