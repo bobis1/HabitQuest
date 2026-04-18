@@ -2,7 +2,11 @@
 
 importer="font_data_dynamic"
 type="FontFile"
+<<<<<<< Updated upstream
 uid="uid://bodtqoyaljai8"
+=======
+uid="uid://dqvjg6momgx1o"
+>>>>>>> Stashed changes
 path="res://.godot/imported/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata"
 
 [deps]
