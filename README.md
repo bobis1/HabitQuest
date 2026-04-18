@@ -14,7 +14,7 @@ Frontend: https://bobis1.github.io/hshacks/
 We used Godot for the main product
   GDScript
 
-## getting started(website)
+## getting started( Downloader website)
   open the website and click the download button
 
 ## getting started(github)
