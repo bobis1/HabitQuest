@@ -1,25 +1,26 @@
 [gd_scene format=3 uid="uid://dps5888mh4l7u"]
 
 [ext_resource type="Script" uid="uid://5xuyv0xlpqef" path="res://Scripts/habitTracking.gd" id="1_ig7tw"]
-[ext_resource type="Texture2D" path="res://Assets/pixel-art-river-landscape-illustration (1).jpg" id="2_7mycd"]
+[ext_resource type="Texture2D" uid="uid://cj3rm6gq4ejmq" path="res://Assets/pixel-art-river-landscape-illustration.jpg" id="2_272bh"]
 [ext_resource type="Texture2D" uid="uid://berbur2tsi80l" path="res://Tux.png" id="3_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cusu0luqxre4r" path="res://Assets/liwo.png" id="4_kek77"]
 [ext_resource type="Texture2D" uid="uid://dbobtecd3rtqo" path="res://Speech_balloon.svg.png" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b04lwqaoqvuum" path="res://Assets/Square.png" id="5_lquwl"]
 [ext_resource type="Script" path="res://file_dialog.gd" id="7_272bh"]
 
-[node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay", "StreakNaming", "StreakContainer", "AttackCharge")]
+[node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay", "StreakNaming", "StreakContainer", "AttackCharge", "FileDia")]
 script = ExtResource("1_ig7tw")
 streakButton = NodePath("Control/Label2/CreateStreak")
 streakDisplay = NodePath("Control/Label")
 StreakNaming = NodePath("Control/StreakNaming")
 StreakContainer = NodePath("Control/VBoxContainer")
 AttackCharge = NodePath("Control/Attack Charges")
+FileDia = NodePath("FileDialog")
 
 [node name="PixelArtRiverLandscapeIllustration(1)" type="Sprite2D" parent="." unique_id=928556761]
 position = Vector2(524, 329)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_7mycd")
+texture = ExtResource("2_272bh")
 
 [node name="Control" type="Control" parent="." unique_id=2045931258]
 layout_mode = 3
@@ -76,6 +77,7 @@ offset_right = 693.0
 offset_bottom = 765.0
 scale = Vector2(0.25, 0.25)
 icon = ExtResource("4_kek77")
+flat = true
 
 [node name="Tux" type="TextureRect" parent="Control" unique_id=144889326]
 visible = false
