@@ -5,6 +5,7 @@ extends Node
 @export var StreakNaming: Control
 @export var StreakContainer: VBoxContainer
 @export var AttackCharge: Label
+@export var FileDia: FileDialog
 var SceneTemplate: PackedScene = preload("res://StreakTemplate.tscn")
 var currentHabitName: String
 var isNameSubmitted: bool
@@ -97,3 +98,18 @@ func _on_timer_timeout() -> void:
 	Globals.AttackCharge += 1
 	AttackCharge.text = "Attack Charges:" + str(Globals.AttackCharge)
 	pass 
+
+
+func _on_delete_pressed() -> void:
+	FileDia.visible = true
+	pass 
+
+
+func _on_file_dialog_file_selected(path: String) -> void:
+	if FileAccess.file_exists(path):
+		DirAccess.remove_absolute(path)
+		print("File deleted successfully.")
+	else:
+		print("File does not exist.")
+	get_tree().change_scene_to_file("res://main.tscn")
+pass 
