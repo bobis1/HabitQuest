@@ -1,26 +1,12 @@
 [gd_scene format=3 uid="uid://dps5888mh4l7u"]
 
 [ext_resource type="Script" uid="uid://5xuyv0xlpqef" path="res://Scripts/habitTracking.gd" id="1_ig7tw"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[ext_resource type="FontFile" uid="uid://bodtqoyaljai8" path="res://Minecraft.ttf" id="2_272bh"]
-[ext_resource type="Texture2D" uid="uid://berbur2tsi80l" path="res://Tux.png" id="3_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://bpx8agwm6mxqg" path="res://liwo.png" id="3_5vw27"]
-=======
-[ext_resource type="Texture2D" uid="uid://cj3rm6gq4ejmq" path="res://Assets/pixel-art-river-landscape-illustration.jpg" id="2_5vw27"]
-[ext_resource type="FontFile" uid="uid://dqvjg6momgx1o" path="res://Minecraft.ttf" id="2_272bh"]
+[ext_resource type="Texture2D" path="res://Assets/pixel-art-river-landscape-illustration (1).jpg" id="2_7mycd"]
 [ext_resource type="Texture2D" uid="uid://berbur2tsi80l" path="res://Tux.png" id="3_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cusu0luqxre4r" path="res://Assets/liwo.png" id="4_kek77"]
->>>>>>> Stashed changes
-=======
-[ext_resource type="Texture2D" uid="uid://cj3rm6gq4ejmq" path="res://Assets/pixel-art-river-landscape-illustration.jpg" id="2_5vw27"]
-[ext_resource type="FontFile" uid="uid://dqvjg6momgx1o" path="res://Minecraft.ttf" id="2_272bh"]
-[ext_resource type="Texture2D" uid="uid://berbur2tsi80l" path="res://Tux.png" id="3_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://cusu0luqxre4r" path="res://Assets/liwo.png" id="4_kek77"]
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://dbobtecd3rtqo" path="res://Speech_balloon.svg.png" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b04lwqaoqvuum" path="res://Assets/Square.png" id="5_lquwl"]
-[ext_resource type="Texture2D" uid="uid://dpmnvj0grew8n" path="res://pixel-art-river-landscape-illustration.jpg" id="7_kek77"]
+[ext_resource type="Script" path="res://file_dialog.gd" id="7_272bh"]
 
 [node name="Node2D" type="Node2D" unique_id=1256048991 node_paths=PackedStringArray("streakButton", "streakDisplay", "StreakNaming", "StreakContainer", "AttackCharge")]
 script = ExtResource("1_ig7tw")
@@ -30,40 +16,16 @@ StreakNaming = NodePath("Control/StreakNaming")
 StreakContainer = NodePath("Control/VBoxContainer")
 AttackCharge = NodePath("Control/Attack Charges")
 
+[node name="PixelArtRiverLandscapeIllustration(1)" type="Sprite2D" parent="." unique_id=928556761]
+position = Vector2(524, 329)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_7mycd")
+
 [node name="Control" type="Control" parent="." unique_id=2045931258]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1041114074]
-z_index = -1
-=======
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=310193844]
-z_index = -2
->>>>>>> Stashed changes
-=======
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=310193844]
-z_index = -2
->>>>>>> Stashed changes
-z_as_relative = false
-layout_mode = 0
-offset_right = 7000.0
-offset_bottom = 3923.0
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-scale = Vector2(0.16896755, 0.16716218)
-texture = ExtResource("7_kek77")
-=======
-scale = Vector2(0.16807601, 0.16819002)
-texture = ExtResource("2_5vw27")
->>>>>>> Stashed changes
-=======
-scale = Vector2(0.16807601, 0.16819002)
-texture = ExtResource("2_5vw27")
->>>>>>> Stashed changes
 
 [node name="Label" type="Label" parent="Control" unique_id=1710800276]
 visible = false
@@ -76,59 +38,19 @@ offset_bottom = 114.0
 [node name="StreakNaming" type="Control" parent="Control" unique_id=172233871]
 visible = false
 anchors_preset = 0
-<<<<<<< Updated upstream
 offset_left = 770.0
 offset_top = 84.0
 offset_right = 810.0
 offset_bottom = 124.0
-=======
-offset_left = 171.0
-offset_top = 212.0
-offset_right = 211.0
-offset_bottom = 252.0
->>>>>>> Stashed changes
 
 [node name="LineEdit" type="LineEdit" parent="Control/StreakNaming" unique_id=1237987199]
-visible = false
 layout_mode = 0
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 offset_left = -74.0
 offset_top = -1.0
 offset_right = 226.0
 offset_bottom = 30.0
-theme_override_colors/font_color = Color(0.52156866, 0.28235295, 0.050980393, 1)
-theme_override_fonts/font = ExtResource("2_272bh")
-theme_override_font_sizes/font_size = 17
-=======
-=======
->>>>>>> Stashed changes
-offset_left = -686.0
-offset_top = 168.0
-offset_right = -386.0
-offset_bottom = 199.0
-theme_override_colors/font_color = Color(0.53937244, 0.30564815, 0.105387084, 1)
-theme_override_fonts/font = ExtResource("2_272bh")
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 placeholder_text = "Streak Name"
 
-<<<<<<< Updated upstream
-=======
-[node name="CreateStreak" type="Button" parent="Control" unique_id=62943996]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 523.0
-offset_top = 256.0
-offset_right = 1043.0
-offset_bottom = 776.0
-scale = Vector2(0.25, 0.25)
-icon = ExtResource("3_5vw27")
-flat = true
-
->>>>>>> Stashed changes
 [node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1029101994]
 layout_mode = 0
 offset_left = 131.0
@@ -137,53 +59,23 @@ offset_right = 171.0
 offset_bottom = 296.0
 theme_override_constants/separation = 35
 
-[node name="Create Streak Label" type="Label" parent="Control" unique_id=1332841390]
+[node name="Label2" type="Label" parent="Control" unique_id=1332841390]
 layout_mode = 0
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 offset_left = 549.0
 offset_top = 21.0
 offset_right = 654.0
 offset_bottom = 44.0
-=======
-offset_left = 513.0
-offset_top = 221.99998
-offset_right = 631.0
-offset_bottom = 245.99998
-scale = Vector2(1.6800001, 1.6399988)
-theme_override_colors/font_color = Color(0.5197665, 0.28240633, 0.052693315, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.99607843)
-theme_override_fonts/font = ExtResource("2_272bh")
-theme_override_font_sizes/font_size = 17
->>>>>>> Stashed changes
-=======
-=======
->>>>>>> Stashed changes
-offset_left = 452.00003
-offset_top = 429.99997
-offset_right = 563.0
-offset_bottom = 452.99997
-scale = Vector2(2.332257, 2.107539)
-theme_override_colors/font_color = Color(0.5372549, 0.30980393, 0.0627451, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_272bh")
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 text = "Create Streak"
 
 [node name="CreateStreak" type="Button" parent="Control/Label2" unique_id=62943996]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 10.719235
-offset_top = -100.59125
-offset_right = 748.71924
-offset_bottom = 637.40875
-scale = Vector2(0.12424723, 0.12969184)
+offset_left = -45.0
+offset_top = 27.0
+offset_right = 693.0
+offset_bottom = 765.0
+scale = Vector2(0.25, 0.25)
 icon = ExtResource("4_kek77")
-flat = true
 
 [node name="Tux" type="TextureRect" parent="Control" unique_id=144889326]
 visible = false
@@ -223,8 +115,6 @@ offset_left = 1026.0
 offset_top = 27.0
 offset_right = 1113.0
 offset_bottom = 58.0
-theme_override_colors/font_color = Color(0.73584616, 0.028411822, 0, 1)
-theme_override_fonts/font = ExtResource("2_272bh")
 text = "Boss Fight"
 
 [node name="Square" type="Sprite2D" parent="Control" unique_id=23728717]
@@ -235,11 +125,9 @@ texture = ExtResource("5_lquwl")
 [node name="Attack Charges" type="Label" parent="Control" unique_id=874328643]
 layout_mode = 0
 offset_left = 701.0
-offset_top = 32.0
-offset_right = 826.0
-offset_bottom = 55.0
-theme_override_colors/font_color = Color(0.2908855, 0.7007412, 0.40356383, 1)
-theme_override_fonts/font = ExtResource("2_272bh")
+offset_top = 26.0
+offset_right = 822.0
+offset_bottom = 49.0
 text = "Attack Charges:"
 
 [node name="TextureRect" type="TextureRect" parent="Control/Attack Charges" unique_id=899975545]
@@ -248,10 +136,26 @@ offset_top = -15.0
 offset_right = 40.0
 offset_bottom = 25.0
 
+[node name="Delete" type="Button" parent="Control" unique_id=949507809]
+layout_mode = 0
+offset_left = 1009.0
+offset_top = 69.0
+offset_right = 1122.0
+offset_bottom = 100.0
+text = "Delete Streak"
+
 [node name="Timer" type="Timer" parent="." unique_id=2017707756]
 autostart = true
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1777153122]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+access = 1
+script = ExtResource("7_272bh")
 
 [connection signal="text_submitted" from="Control/StreakNaming/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Control/Label2/CreateStreak" to="." method="_on_create_streak_pressed"]
 [connection signal="pressed" from="Control/Boss Fight" to="." method="_on_boss_fight_pressed"]
+[connection signal="pressed" from="Control/Delete" to="." method="_on_delete_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
