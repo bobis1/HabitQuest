@@ -19,7 +19,7 @@ var targetTime: float = 0.0
 const TIMER_SAVE_PATH = "user://timer.txt"
 
 func _ready() -> void:
-	StartTimer()
+	#StartTimer()
 	var StreakVar = DirAccess.open("user://Streaks")
 	if StreakVar:
 		var StreakFiles = StreakVar.get_files()
@@ -49,16 +49,16 @@ func save_timer() -> void:
 func _process(delta: float) -> void:
 	streakDisplay.text = str(Globals.StreakNum)
 	
-	if timer_is_running:
-		var currentTime = Time.get_unix_time_from_system()
-		
-		if currentTime >= targetTime:
-			Globals.AttackCharge += 1
-			AttackCharge.text = "Attack Charges:" + str(Globals.AttackCharge)
-			
-			targetTime = currentTime + INTERVAL
-			
-			save_timer()
+	#if timer_is_running:
+		#var currentTime = Time.get_unix_time_from_system()
+		#
+		#if currentTime >= targetTime:
+			#Globals.AttackCharge += 1
+			#AttackCharge.text = "Attack Charges:" + str(Globals.AttackCharge)
+			#
+			#targetTime = currentTime + INTERVAL
+			#
+			#save_timer()
 
 
 
@@ -96,4 +96,4 @@ func _on_boss_fight_pressed() -> void:
 func _on_timer_timeout() -> void:
 	Globals.AttackCharge += 1
 	AttackCharge.text = "Attack Charges:" + str(Globals.AttackCharge)
-	pass # Replace with function body.
+	pass 
