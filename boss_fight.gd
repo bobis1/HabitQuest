@@ -20,8 +20,10 @@ func _on_attack_pressed() -> void:
 	if  Globals.AttackCharge > 0:
 		health = health - Globals.StreakNum
 		if health <= 0:
-			healthLabel.text = "You win!"
-			defeatParticles.visible = true
+			particleSystem.visible = True
+			ParticleTimer.start()
+			await get_tree().create_timer(1.0).timeout
+			healthLabel.text = "You win!!!"
 			Sprite.visible = false
 		else:
 			healthLabel.text = "Health:" + str(health)

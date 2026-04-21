@@ -50,10 +50,10 @@ offset_bottom = 40.0
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=235383153]
 z_index = -2
 layout_mode = 0
-offset_left = -111.0
-offset_top = 3.0000005
-offset_right = 689.0
-offset_bottom = 452.0
+offset_left = -106.00001
+offset_top = -34.000004
+offset_right = 694.0
+offset_bottom = 415.0
 scale = Vector2(1.5618823, 1.5076956)
 texture = ExtResource("5_xtu02")
 
@@ -67,7 +67,7 @@ scale = Vector2(2, 2)
 theme_override_colors/font_color = Color(1, 0.050980393, 0.08235294, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_u3rom")
-text = "Health: 0"
+text = "Health: 800"
 
 [node name="Attack" type="Button" parent="Control" unique_id=2054247799]
 layout_mode = 0
@@ -89,7 +89,7 @@ theme_override_fonts/font = ExtResource("6_u3rom")
 text = "Back"
 
 [node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=304285163]
-position = Vector2(483, 407)
+position = Vector2(563.99994, 324)
 scale = Vector2(10, 10)
 texture = ExtResource("3_di0ir")
 
@@ -127,7 +127,7 @@ text = "Attack Counter:"
 wait_time = 0.5
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1500313610]
-position = Vector2(569, 325)
+position = Vector2(564, 323)
 script = ExtResource("6_di0ir")
 
 [connection signal="pressed" from="Control/Attack" to="." method="_on_attack_pressed"]
